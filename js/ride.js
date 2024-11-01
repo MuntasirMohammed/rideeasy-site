@@ -44,9 +44,9 @@ WildRydes.map = WildRydes.map || {};
         console.log('Response received from API: ', result);
         unicorn = result.Unicorn;
         pronoun = unicorn.Gender === 'Male' ? 'his' : 'her';
-        displayUpdate(unicorn.Name + ', your ' + unicorn.Color + ' unicorn, is on ' + pronoun + ' way.');
+        displayUpdate(unicorn.Name + ', driving a ' + unicorn.Color + ' Driver, is on ' + pronoun + ' way.');
         animateArrival(function animateCallback() {
-            displayUpdate(unicorn.Name + ' has arrived. Giddy up!');
+            displayUpdate(unicorn.Name + ' has arrived. Enjoy your ride!');
             WildRydes.map.unsetLocation();
             $('#request').prop('disabled', 'disabled');
             $('#request').text('Set Pickup');
@@ -68,7 +68,7 @@ WildRydes.map = WildRydes.map || {};
         if (!_config.api.invokeUrl) {
             $('#noApiMessage').show();
         }
-    });
+    });    
 
     function handlePickupChanged() {
         var requestButton = $('#request');
