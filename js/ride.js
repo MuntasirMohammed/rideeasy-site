@@ -44,7 +44,7 @@ WildRydes.map = WildRydes.map || {};
         console.log('Response received from API: ', result);
         unicorn = result.Unicorn;
         pronoun = unicorn.Gender === 'Male' ? 'his' : 'her';
-        displayUpdate(unicorn.Name + ', driving a ' + unicorn.Color + ' Driver, is on ' + pronoun + ' way.');
+        displayUpdate(unicorn.Name + ', driving a ' + unicorn.Color + ', is on ' + pronoun + ' way.');
         animateArrival(function animateCallback() {
             displayUpdate(unicorn.Name + ' has arrived. Enjoy your ride!');
             WildRydes.map.unsetLocation();
